@@ -1,0 +1,97 @@
+/* ============================================================
+   RESPONSIVE.CSS
+   Ajustes de layout general por punto de quiebre.
+   Los componentes con su propio comportamiento responsive
+   (header, carrusel, acordeón, lightbox, formulario, footer)
+   ya incluyen sus media queries junto a su bloque en styles.css;
+   aquí se ajustan las utilidades de cuadrícula y el espaciado global.
+   ============================================================ */
+
+/* Laptops pequeños / tablets horizontales */
+@media (max-width: 1080px){
+  .wrap{ padding: 0 20px; }
+  .grid-4{ grid-template-columns: repeat(3, 1fr); }
+  .hero-grid{ gap: 36px; }
+}
+
+/* Tablets */
+@media (max-width: 860px){
+  .grid-3{ grid-template-columns: repeat(2, 1fr); }
+  .grid-4{ grid-template-columns: repeat(2, 1fr); }
+  .accordion-grid{ grid-template-columns: 1fr; }
+  .hero-grid{ grid-template-columns: 1fr; }
+  .hero-media{ order: -1; }
+  .split-panel{ grid-template-columns: 1fr; }
+  .level-path{ grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Tablets pequeños / Celulares grandes */
+@media (max-width: 760px){
+  .area-split{ grid-template-columns: 1fr; }
+  .contact-layout{ grid-template-columns: 1fr; }
+  .footer-grid{ grid-template-columns: 1fr 1fr; }
+  .accordion-panel-inner{ padding-left: 22px; }
+}
+
+/* Celulares grandes */
+@media (max-width: 640px){
+  main section{ padding: 40px 0; }
+  .grid-2, .grid-3, .grid-4{ grid-template-columns: 1fr; }
+  .level-path{ grid-template-columns: 1fr; }
+  .events-grid{ grid-template-columns: 1fr; }
+  .filter-bar{ justify-content: center; }
+  .form-grid{ grid-template-columns: 1fr; }
+  .hero-actions{ flex-direction: column; }
+  .hero-actions .btn{ width: 100%; }
+  .page-banner{ padding: 40px 0 52px; }
+  .map-embed iframe{ height: 220px; }
+}
+
+/* Celulares medianos */
+@media (max-width: 480px){
+  .wrap{ padding: 0 16px; }
+  .header-bar{ padding: 12px 16px; }
+  .brand-text span{ display: none; }
+  .hero-floating{ padding: 14px 16px; }
+  .card-body{ padding: 18px 18px 20px; }
+  .split-panel .panel .panel-body{ padding: 20px 20px 24px; }
+  .section-head{ margin-bottom: 32px; }
+  .accordion-trigger{ padding: 18px 18px; }
+  .accordion-trigger .acc-icon{ width: 40px; height: 40px; font-size: 1.3rem; }
+  .filter-btn{ padding: 10px 16px; font-size: .8rem; }
+  .btn{ padding: 12px 24px; font-size: .95rem; }
+}
+
+/* Celulares pequeños */
+@media (max-width: 380px){
+  .wrap{ padding: 0 12px; }
+  .brand-text span{ display: none; }
+  .btn{ padding: 11px 20px; font-size: .9rem; }
+  .hero-floating{ padding: 12px 14px; }
+  .hero-floating .icon{ font-size: 1.3rem; }
+  .hero-floating strong{ font-size: .85rem; }
+  .hero-floating span{ font-size: .75rem; }
+  .filter-btn{ padding: 8px 12px; font-size: .75rem; }
+  .card-media{ aspect-ratio: 16/10; }
+  .area-card{ min-height: 280px; }
+  .map-embed iframe{ height: 200px; }
+  .info-card{ padding: 24px 20px; }
+  .form-card{ padding: 24px 20px; }
+}
+
+/* Pantallas grandes: limitar el ancho de lectura de párrafos largos */
+@media (min-width: 1400px){
+  :root{ --max-width: 1280px; }
+}
+
+/* Print styles */
+@media print{
+  .site-header, .nav-toggle, .whatsapp-float, .back-to-top, .hero-floating,
+  .filter-bar, .carousel-controls, .lightbox, .form-card .btn{ display: none !important; }
+  .main-nav{ position: static !important; transform: none !important; }
+  .submenu{ display: none !important; }
+  .hero, .page-banner{ padding: 20px 0 !important; }
+  body{ background: white !important; color: black !important; }
+  a{ text-decoration: underline; }
+  .card, .split-panel .panel, .area-card{ box-shadow: none !important; border: 1px solid #ccc !important; break-inside: avoid; }
+}
