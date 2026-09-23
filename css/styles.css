@@ -164,7 +164,7 @@ section.tint{ background: #F3EEE3; }
   min-height: var(--header-h);
 }
 .brand{ display: flex; align-items: center; gap: 12px; }
-.brand img{ width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0; }
+.brand img{ width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0; }
 .brand-text{ display: flex; flex-direction: column; line-height: 1.2; min-width: 0; }
 .brand-text strong{ font-family: var(--font-display); font-size: 1.05rem; color: var(--color-primary-dark); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .brand-text span{ font-size: .72rem; color: var(--color-text-muted); letter-spacing: .03em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
