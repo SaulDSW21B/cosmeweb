@@ -164,8 +164,8 @@ section.tint{ background: #F3EEE3; }
   min-height: var(--header-h);
 }
 .brand{ display: flex; align-items: center; gap: 12px; }
-.brand img{  width: 70px;
-  height: 70px;
+.brand img{  width: 60px;
+  height: 60px;
   object-fit: contain;
   flex-shrink: 0; }
 .brand-text{ display: flex; flex-direction: column; line-height: 1.2; min-width: 0; }
@@ -572,8 +572,8 @@ html.js .accordion-panel.is-open{ max-height: 1000px; opacity: 1; }
 .site-footer{ background: var(--color-primary-dark); color: rgba(255,255,255,.86); padding: 64px 0 0; margin-top: 40px; }
 .footer-grid{ display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.1fr; gap: 36px; padding-bottom: 44px; }
 .footer-brand{ display: flex; gap: 12px; align-items: flex-start; }
-.footer-brand img{  width: 70px;
-  height: 70px;
+.footer-brand img{  width: 60px;
+  height: 60px;
   object-fit: contain;
   flex-shrink: 0; }
 .footer-brand strong{ display: block; color: #fff; font-family: var(--font-display); font-size: 1.05rem; }
