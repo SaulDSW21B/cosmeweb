@@ -264,39 +264,90 @@ section.tint{ background: #F3EEE3; }
 .breadcrumbs .sep{ opacity: .6; flex-shrink: 0; }
 .breadcrumbs [aria-current="page"]{ opacity: .85; text-decoration: none; word-break: break-word; }
 
-/* ---------- 7. BANNER INTERIOR / HERO ---------- */
-.page-banner{
-  background: linear-gradient(125deg, var(--color-primary-dark), var(--color-primary) 70%);
-  color: #fff; padding: 56px 0 68px;
+/* ---------- 7. HERO BANNER TIPO PORTADA FACEBOOK ---------- */
+.hero {
+  padding: 16px 0 clamp(48px, 5vw, 72px);
 }
-.page-banner h1{ color: #fff; margin-bottom: 12px; }
-.page-banner p{ color: rgba(255,255,255,.9); max-width: 60ch; }
 
-.hero{ padding: 8px 0 clamp(48px, 7vw, 88px); }
-.hero-grid{ display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: start; }
-.hero-copy .eyebrow{ display: block; }
-.hero-copy h1{ margin-bottom: 18px; }
-.hero-copy p{ font-size: 1.1rem; color: var(--color-text-muted); }
-.hero-actions{ display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
-.hero-media{ position: relative; }
-.hero-media img{
-  border-radius: var(--radius-lg); aspect-ratio: 4/3.1; object-fit: cover;
-  box-shadow: var(--shadow-lift); width: 100%; height: auto;
+.hero-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
-.hero-floating{
-  position: absolute; left: -18px; bottom: -22px; background: var(--color-surface);
-  border-radius: var(--radius-md); box-shadow: var(--shadow-lift); padding: 16px 20px;
-  display: flex; align-items: center; gap: 12px; max-width: 240px; width: 100%;
+
+/* Contenedor de la Portada */
+.hero-media {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lift);
+}
+
+.hero-media img {
+  width: 100%;
+  /* Proporción estándar de portada (Aprox 2.7:1 / Facebook Cover style) */
+  aspect-ratio: 820 / 312; 
+  object-fit: cover;
+  display: block;
+}
+
+/* Ajuste del elemento flotante tipo tarjeta sobre la portada */
+.hero-floating {
+  position: absolute;
+  left: 24px;
+  bottom: 20px;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lift);
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 280px;
+  width: auto;
   box-sizing: border-box;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.95); /* Legibilidad superior */
 }
-.hero-floating .icon{ font-size: 1.6rem; flex-shrink: 0; }
-.hero-floating strong{ display: block; font-family: var(--font-display); font-size: .95rem; color: var(--color-primary-dark); word-break: break-word; }
-.hero-floating span{ font-size: .82rem; color: var(--color-text-muted); word-break: break-word; }
 
-@media (max-width: 860px){
-  .hero-grid{ grid-template-columns: 1fr; }
-  .hero-media{ order: -1; }
-  .hero-floating{ position: static; margin-top: 20px; left: auto; bottom: auto; max-width: none; width: 100%; }
+/* Copia de texto debajo de la portada */
+.hero-copy {
+  max-width: 800px;
+}
+
+.hero-copy .eyebrow {
+  display: block;
+}
+
+.hero-copy h1 {
+  margin-bottom: 14px;
+}
+
+.hero-copy p {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 640px) {
+  .hero-media img {
+    /* Relación de aspecto más alta en móviles para evitar colapso vertical */
+    aspect-ratio: 16 / 9; 
+  }
+  
+  .hero-floating {
+    position: static;
+    margin: 12px 0 0;
+    max-width: 100%;
+  }
 }
 
 /* ---------- 8. TARJETAS ---------- */
