@@ -569,30 +569,119 @@ html.js .accordion-panel.is-open{ max-height: 1000px; opacity: 1; }
 }
 
 /* ---------- 16. FOOTER ---------- */
-.site-footer{ background: var(--color-primary-dark); color: rgba(255,255,255,.86); padding: 64px 0 0; margin-top: 40px; }
-.footer-grid{ display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.1fr; gap: 36px; padding-bottom: 44px; }
-.footer-brand{ display: flex; gap: 12px; align-items: flex-start; }
-.footer-brand img{  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  flex-shrink: 0; }
-.footer-brand strong{ display: block; color: #fff; font-family: var(--font-display); font-size: 1.05rem; }
-.footer-brand p{ color: rgba(255,255,255,.7); font-size: .87rem; margin-top: 8px; }
-.footer-col h4{ color: #fff; font-family: var(--font-body); font-weight: 700; font-size: .85rem; letter-spacing: .03em; margin-bottom: 14px; }
-.footer-col a, .footer-col p{ display: block; color: rgba(255,255,255,.75); font-size: .9rem; margin-bottom: 10px; }
-.footer-col a:hover{ color: #fff; }
-.footer-social a{
-  width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; 
-  font-size: 1rem; color: rgba(255,255,255,.75);
+
+.site-footer {
+    background: var(--color-primary-dark);
+    color: rgba(255,255,255,.86);
+    padding: 64px 0 0;
+    margin-top: 40px;
 }
-.footer-social a:hover{ background: rgba(255,255,255,.2); color: #fff; }
-.footer-social a:focus-visible{ outline: 3px solid var(--color-accent); outline-offset: 2px; }
-.footer-bottom{
-  border-top: 1px solid rgba(255,255,255,.14); padding: 20px 0; text-align: center;
-  font-size: .82rem; color: rgba(255,255,255,.65);
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+    padding-bottom: 44px;
 }
-@media (max-width: 900px){ .footer-grid{ grid-template-columns: 1fr 1fr; } }
-@media (max-width: 560px){ .footer-grid{ grid-template-columns: 1fr; } }
+
+.footer-col {
+    text-align: center;
+}
+
+.footer-brand {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.footer-brand img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.footer-brand strong {
+    display: block;
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+}
+
+.footer-brand p {
+    color: rgba(255,255,255,.7);
+    font-size: .87rem;
+    margin-top: 8px;
+}
+
+.footer-col h4 {
+    color: #fff;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: .85rem;
+    letter-spacing: .03em;
+    margin-bottom: 14px;
+}
+
+.footer-col a,
+.footer-col p {
+    display: block;
+    color: rgba(255,255,255,.75);
+    font-size: .9rem;
+    margin-bottom: 10px;
+}
+
+.footer-col a:hover {
+    color: #fff;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-social a {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: rgba(255,255,255,.75);
+}
+
+.footer-social a:hover {
+    background: rgba(255,255,255,.2);
+    color: #fff;
+}
+
+.footer-social a:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.14);
+    padding: 20px 0;
+    text-align: center;
+    font-size: .82rem;
+    color: rgba(255,255,255,.65);
+}
+
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* ---------- 17. ANIMACIONES DE APARICIÓN ---------- */
 /* Por defecto TODO el contenido es visible (funciona sin JavaScript).
